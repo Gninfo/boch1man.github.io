@@ -6,6 +6,18 @@
   <title>ぼっちまん | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+</script>
+  
 <body>
   <header class="hero">
     <div class="container">
