@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.8;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(960px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.85)),
+    linear-gradient(135deg, #1e293b, #2563eb);
+  color: white;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #bfdbfe;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #dbeafe;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button.primary {
+  background: white;
+  color: #1e3a8a;
+}
+
+.button.secondary {
+  border: 1px solid #bfdbfe;
+  color: white;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: #eaf1ff;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card,
+.timeline-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card h3,
+.timeline-item h3 {
+  color: #1d4ed8;
+  margin-bottom: 0.7rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.links a:hover {
+  background: #1e40af;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .hero-buttons,
+  .links {
+    flex-direction: column;
+  }
+}
