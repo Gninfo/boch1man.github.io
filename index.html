@@ -1,135 +1,182 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ぼっちまん | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>細田 悠貴 | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
 
-  document.querySelectorAll(".fade").forEach(el => observer.observe(el));
-</script>
-  
 <body>
+
+  <!-- ===== Hero ===== -->
   <header class="hero">
     <div class="container">
       <p class="eyebrow">Portfolio</p>
-      <h1>ぼっちまん(@forget1900)</h1>
+      <h1>細田 悠貴</h1>
       <p class="subtitle">
-        数理(教育)に関心を持っている現在、大学4年です。
+        数理・情報・セキュリティに関心を持つ学生
       </p>
-      <div class="hero-buttons">
-        <a href="#about" class="button primary">About Me</a>
-        <a href="#links" class="button secondary">Links</a>
-      </div>
     </div>
   </header>
 
   <main>
-    <section id="about" class="section">
+
+    <!-- ===== About ===== -->
+    <section class="section fade">
       <div class="container">
         <h2>About Me</h2>
-        <p>
-          総合大学の、総合情報学部という学部に所属しています。卒業後に同じ名前の学部を関する通信制大学に通おうとしています。
-          研究室は統計解析研究室というところです。
-          教育現場でC言語を指導するためにはどう工夫すべきかというテーマで卒論を書こうとしていて、今はC言語の特徴についてIPAの資料を読みまくっています。
-          また、教職課程にも取り組んでおり、卒業式の日に情報の教員免許取得見込みが立っています。
-        </p>
+
+        <div class="profile">
+          <img src="images/portrait.jpg" class="profile-img">
+
+          <div>
+            <p>
+              東洋大学 総合情報学部に所属しています。
+              統計解析研究室にて情報理論・ネットワークを中心に学んでいます。
+              またC言語における脆弱性にも関心を持ち、実装を通じて理解を深めています。
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="academic" class="section section-alt">
+    <!-- ===== Projects / Research ===== -->
+    <section class="section fade">
       <div class="container">
-        <h2>Academic Profile</h2>
+        <h2>Projects / Research</h2>
+
         <div class="cards">
+
+          <!-- 研究テーマ -->
           <div class="card">
-            <h3>専攻・関心</h3>
-            <p>
-              専攻は総合情報学!?
-              これだけだとよくわからないので、関心も伝えておくと、
-              大学数学と数学のプログラミングへの応用に関心があります。
-              最近は幾何学にあこがれを持っています。
+            <h3>情報理論・ネットワークおよびソフトウェア脆弱性の基礎研究</h3>
+
+            <p class="abstract">
+              本研究では、情報理論およびネットワーク構造の解析に加え、
+              C言語プログラムにおける脆弱性（バッファオーバーフロー等）の調査を行う。
+              実際のコードを対象とした検証を通じて、セキュリティ上の問題点の構造的理解とその対策について検討する。
+            </p>
+
+            <p class="meta">
+              研究目的：低レイヤ言語における脆弱性の構造理解と、安全なプログラム設計への応用
+            </p>
+
+            <p class="meta">
+              Keywords: 情報理論 / ネットワーク / C言語 / セキュリティ / 脆弱性
             </p>
           </div>
+
+          <!-- バッファオーバーフロー -->
           <div class="card">
-            <h3>Skills</h3>
-            <p>
-              Python / R / C などを学習しています。
+            <h3>バッファオーバーフローと安全なメモリ管理</h3>
+
+            <p class="abstract">
+              C言語においては、メモリ管理を直接扱うため、
+              配列の境界を超えた書き込み（バッファオーバーフロー）が発生する可能性がある。
+              これはメモリ破壊や任意コード実行につながる重大な脆弱性である。
+            </p>
+
+            <p class="abstract">
+              本検討では、スタック構造に着目し、オーバーフロー発生時の挙動を観察するとともに、
+              安全なコーディングの重要性について考察する。
             </p>
           </div>
+
+          <!-- C++ -->
+          <div class="card">
+            <h3>C++標準ライブラリによる安全な実装</h3>
+
+            <p class="abstract">
+              C++では std::vector や std::string などの標準ライブラリが提供され、
+              境界管理とメモリ制御を抽象化することで安全性を向上させる。
+            </p>
+
+            <p class="abstract">
+              本研究では、C言語との比較を通じて、
+              抽象化による安全性向上の効果を検討する。
+            </p>
+          </div>
+
+          <!-- Qiita -->
+          <div class="card">
+            <h3>技術記事（Qiita）</h3>
+
+            <p class="abstract">
+              バッファオーバーフローやC言語のメモリ管理について解説した記事を公開しています。
+            </p>
+
+            <a href="https://qiita.com/forget1900/items/e717663c3ccf9065cbd9"
+               target="_blank"
+               class="button secondary">
+              記事を読む
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="activities" class="section">
+    <!-- ===== PDF ===== -->
+    <section class="section section-alt fade">
       <div class="container">
-        <h2>Activities</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>音楽</h3>
-            <p>
-              大学の管弦楽団でコントラバスを担当しています。
-              パートリーダーとして2年弱、活動しています。
-              最近はコントラバスやエレキベースで有志の演奏オフに参加しています。
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h3>学外活動</h3>
-            <p>
-              外部の学生や社会人と協力しながら、自主ゼミ開催用のDiscord サーバーの運営を行っています。
-              Scientia Meetup の会員。#山口でゼミやりゼミなどの合宿イベントにも参加しています。
-            </p>
+        <h2>Documents</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>研究資料（最終版）</h3>
+
+            <a href="pdf/final.pdf" target="_blank" class="button secondary">
+              PDFを見る
+            </a>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section id="hobbies" class="section section-alt">
+    <!-- ===== Links ===== -->
+    <section class="section fade">
       <div class="container">
-        <h2>Hobbies</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>旅行</h3>
-            <p>
-              青春18きっぷなどを利用した国内旅行を楽しんでいます。
-            </p>
-          </div>
+        <h2>Links</h2>
+
+        <div class="link-cards">
+
+          <a href="https://github.com/Gninfo" target="_blank" class="link-card">
+            <h3>🐙 GitHub</h3>
+            <p>コード・研究</p>
+          </a>
+
+          <a href="https://note.com/bocchman" target="_blank" class="link-card">
+            <h3>📝 Note</h3>
+            <p>記録・文章</p>
+          </a>
+
+        </div>
+
+      </div>
     </section>
 
-<section id="links" class="section section-alt">
-  <div class="container">
-    <h2>Links</h2>
-
-    <div class="link-cards">
-      <a href="https://github.com/Gninfo" target="_blank" class="link-card">
-        <h3>🐙 GitHub</h3>
-        <p>コードや制作物</p>
-      </a>
-
-      <a href="https://twitter.com/forget1900" target="_blank" class="link-card">
-        <h3>🐦 Twitter / X</h3>
-        <p>日常・発信</p>
-      </a>
-
-      <a href="https://note.com/bocchman" target="_blank" class="link-card">
-        <h3>📝 note</h3>
-        <p>文章・記録</p>
-      </a>
-    </div>
-
-  </div>
-</section>
+  </main>
 
   <footer>
-    <p>&copy; 2026 Y.H. All rights reserved.</p>
+    <p>© 2026 Yuki Hosoda</p>
   </footer>
+
+  <!-- アニメーション -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+      document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+    });
+  </script>
+
 </body>
 </html>
