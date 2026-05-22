@@ -195,3 +195,86 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
 }
+
+/* ===== Animation ===== */
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Typography upgrade ===== */
+
+body {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.05em;
+}
+
+/* ===== Section improvement ===== */
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section h2 {
+  border-left: 5px solid #1d4ed8;
+  padding-left: 0.8rem;
+}
+
+/* ===== Card polish ===== */
+
+.card,
+.timeline-item,
+.link-card {
+  border-radius: 1.2rem;
+  transition: all 0.25s ease;
+}
+
+.card:hover,
+.timeline-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* ===== Professional tone color ===== */
+
+.section-alt {
+  background: #f1f5f9;
+}
+
+/* ===== Hero refinement ===== */
+
+.hero {
+  text-align: left;
+}
+
+.subtitle {
+  max-width: 600px;
+}
+
+/* ===== Links card refinement ===== */
+
+.link-card {
+  border: 1px solid #e2e8f0;
+}
+
+.link-card:hover {
+  border-color: #1d4ed8;
+}
+
+/* ===== Footer improvement ===== */
+
+footer {
+  font-size: 0.9rem;
+}
+``
