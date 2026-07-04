@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>ぼっちまん | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,36 +11,18 @@
 
   <!-- ===== Hero ===== -->
   <header class="hero">
-    <div class="container">
+    <div class="hero-grid"></div>
+    <div class="container hero-inner">
       <p class="eyebrow">Portfolio</p>
       <h1>ぼっちまん</h1>
       <p class="subtitle">
-        数理・情報・セキュリティに関心を持つ学生
+        数学、とりわけ統計解析に関心を持つ学生です。<br>
+        データの中にある構造やパターンを、数理的な視点から読み解くことに興味があります。
       </p>
     </div>
   </header>
 
   <main>
-
-    <!-- ===== About ===== -->
-    <section class="section fade">
-      <div class="container">
-        <h2>About Me</h2>
-
-        <div class="profile">
-          <img src="images/portrait.jpg" class="profile-img">
-
-          <div>
-            <p>
-              総合情報学部に所属しています。
-              統計解析研究室にて情報理論・ネットワークを中心に学んでいます。
-              またC言語における脆弱性にも関心を持ち、実装を通じて理解を深めています。
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <!-- ===== Projects / Research ===== -->
     <section class="section fade">
@@ -49,58 +31,44 @@
 
         <div class="cards">
 
-          <!-- 研究テーマ -->
+          <!-- 数学自主ゼミ -->
           <div class="card">
-            <h3>情報理論・ネットワークおよびソフトウェア脆弱性の基礎研究</h3>
+            <p class="tag">Seminar</p>
+            <h3>数学自主ゼミ</h3>
 
             <p class="abstract">
-              本研究では、情報理論およびネットワーク構造の解析に加え、
-              C言語プログラムにおける脆弱性（バッファオーバーフロー等）の調査を行う。
-              実際のコードを対象とした検証を通じて、セキュリティ上の問題点の構造的理解とその対策について検討する。
+              有志で数学の自主ゼミを開き、分野を横断しながら学んでいます。
+              これまでに圏論、数理論理学、線形代数、群論、多様体論を扱いました。
             </p>
 
             <p class="meta">
-              研究目的：低レイヤ言語における脆弱性の構造理解と、安全なプログラム設計への応用
+              Keywords: 圏論 / 数理論理学 / 線形代数 / 群論 / 多様体
+            </p>
+          </div>
+
+          <!-- R言語による統計・時系列分析 -->
+          <div class="card">
+            <p class="tag">Statistics</p>
+            <h3>R言語によるデータ分析・時系列予測</h3>
+
+            <p class="abstract">
+              売上データを題材に、R言語を用いた統計分析と時系列予測に取り組んでいます。
+              カテゴリ別・地域別の売上傾向を可視化するとともに、広告費と売上の関係を回帰的に分析しました。
+            </p>
+
+            <p class="abstract">
+              時系列データに対してはSTL分解による季節・トレンド成分の抽出、ACF/PACFによる自己相関構造の確認を行い、
+              ホールドアウト検証を経たうえで将来期間の売上予測を行いました。
             </p>
 
             <p class="meta">
-              Keywords: 情報理論 / ネットワーク / C言語 / セキュリティ / 脆弱性
-            </p>
-          </div>
-
-          <!-- バッファオーバーフロー -->
-          <div class="card">
-            <h3>バッファオーバーフローと安全なメモリ管理</h3>
-
-            <p class="abstract">
-              C言語においては、メモリ管理を直接扱うため、
-              配列の境界を超えた書き込み（バッファオーバーフロー）が発生する可能性がある。
-              これはメモリ破壊や任意コード実行につながる重大な脆弱性である。
-            </p>
-
-            <p class="abstract">
-              本検討では、スタック構造に着目し、オーバーフロー発生時の挙動を観察するとともに、
-              安全なコーディングの重要性について考察する。
-            </p>
-          </div>
-
-          <!-- C++ -->
-          <div class="card">
-            <h3>C++標準ライブラリによる安全な実装</h3>
-
-            <p class="abstract">
-              C++では std::vector や std::string などの標準ライブラリが提供され、
-              境界管理とメモリ制御を抽象化することで安全性を向上させる。
-            </p>
-
-            <p class="abstract">
-              本研究では、C言語との比較を通じて、
-              抽象化による安全性向上の効果を検討する。
+              Keywords: 統計解析 / 時系列分析 / STL分解 / 回帰分析 / R
             </p>
           </div>
 
           <!-- Qiita -->
           <div class="card">
+            <p class="tag">Article</p>
             <h3>技術記事（Qiita）</h3>
 
             <p class="abstract">
@@ -118,26 +86,8 @@
       </div>
     </section>
 
-    <!-- ===== PDF ===== -->
-    <section class="section section-alt fade">
-      <div class="container">
-        <h2>Documents</h2>
-
-        <div class="cards">
-          <div class="card">
-            <h3>研究資料（最終版）</h3>
-
-            <a href="pdf/final.pdf" target="_blank" class="button secondary">
-              PDFを見る
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
     <!-- ===== Links ===== -->
-    <section class="section fade">
+    <section class="section section-alt fade">
       <div class="container">
         <h2>Links</h2>
 
