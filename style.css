@@ -75,6 +75,49 @@ h2 {
   padding-left: 12px;
 }
 
+/* ===== About ===== */
+.about-text {
+  max-width: 48rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* ===== Academic Profile ===== */
+.profile-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 48rem;
+}
+
+.profile-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+}
+
+.profile-row dt {
+  font-weight: 700;
+  color: #0f766e;
+  font-size: 0.95rem;
+}
+
+.profile-row dd {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+@media (max-width: 560px) {
+  .profile-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
+
 /* ===== Cards ===== */
 .cards {
   display: grid;
